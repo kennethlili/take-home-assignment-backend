@@ -8,6 +8,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "real_estate_zoning")
@@ -17,9 +18,11 @@ public class Property {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull()
     @Column(columnDefinition = "geometry(Polygon,4326)")
     private Polygon geom;
 
+    @NotNull()
     private String name;
 
     @Column(name = "mail_city")
@@ -30,17 +33,22 @@ public class Property {
 
     private String mailadd;
 
+    @NotNull()
     @Column(name = "parcelnumb")
     private String parcelNumber;
 
+    @NotNull()
     private String path;
 
+    @NotNull()
     @Column(name = "usedesc")
     private String useDescription;
 
+    @NotNull()
     @Column(name = "zoning_sub")
     private String zoningSub;
 
+    @NotNull()
     @Column(name = "zoning_typ")
     private String zoningType;
 
