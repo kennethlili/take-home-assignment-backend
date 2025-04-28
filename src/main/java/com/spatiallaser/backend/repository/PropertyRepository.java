@@ -11,6 +11,11 @@ import com.spatiallaser.backend.entity.Property;
 /**
  * PostGIS ST Function Reference:
  * https://www.e-education.psu.edu/spatialdb/node/1974
+ * 
+ * Note: This repo intentionally extends the base Repository interface
+ * instead of JpaRepository to expose only the explicitly defined methods.
+ * We only need the findByBoundingBox method and don't want to expose any
+ * of the standard CRUD operations that would come with JpaRepository.
  */
 
 @org.springframework.stereotype.Repository
