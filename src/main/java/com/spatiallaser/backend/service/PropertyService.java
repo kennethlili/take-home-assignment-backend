@@ -4,11 +4,14 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import org.springframework.stereotype.Service;
+
 import com.spatiallaser.backend.entity.reading.Property;
 import com.spatiallaser.backend.entity.writing.ZoningType;
 import com.spatiallaser.backend.repository.reading.PropertyRepository;
 import com.spatiallaser.backend.repository.writing.ZoningTypeRepository;
 
+@Service
 public class PropertyService {
 
     private final PropertyRepository propertyRepository;
