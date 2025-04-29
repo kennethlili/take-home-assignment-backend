@@ -102,4 +102,8 @@ public class Property {
         return zoningType;
     }
 
+    public void setZoningType(ZoningTypeEnum zoningType) {
+        this.zoningType = zoningType;
+    }
+
 }

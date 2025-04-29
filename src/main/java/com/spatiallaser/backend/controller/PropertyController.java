@@ -15,6 +15,7 @@ import com.spatiallaser.backend.dto.ZoningUpdateRequest;
 import com.spatiallaser.backend.entity.reading.Property;
 import com.spatiallaser.backend.entity.writing.ZoningType;
 import com.spatiallaser.backend.repository.reading.PropertyRepository;
+import com.spatiallaser.backend.service.PropertyService;
 import com.spatiallaser.backend.service.PropertyZoningService;
 
 import jakarta.validation.Valid;
@@ -25,12 +26,12 @@ import jakarta.validation.Valid;
 @RequestMapping("/api")
 public class PropertyController {
 
-    private final PropertyRepository propertyRepository;
     private final PropertyZoningService propertyZoningService;
+    private final PropertyService propertyService;
 
-    public PropertyController(PropertyRepository propertyRepository, PropertyZoningService propertyZoningService) {
+    public PropertyController(PropertyRepository propertyRepository, PropertyZoningService propertyZoningService, PropertyService propertyService) {
         this.propertyZoningService = propertyZoningService;
-        this.propertyRepository = propertyRepository;
+        this.propertyService = propertyService;
     }
 
     @GetMapping("/properties")
@@ -42,7 +43,7 @@ public class PropertyController {
 
         List<Property> properties;
 
-        properties = propertyRepository.findByBoundingBox(west, south, east, north);
+        properties = propertyService.getPropertiesWithUpdatedZoning(west, south, east, north);
 
         return ResponseEntity.ok(properties);
     }
