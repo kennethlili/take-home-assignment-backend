@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.spatiallaser.backend.entity.Property;
-import com.spatiallaser.backend.repository.PropertyRepository;
+import com.spatiallaser.backend.entity.reading.Property;
+import com.spatiallaser.backend.repository.reading.PropertyRepository;
 
 @RestController
 // TODO: add CORS configuration

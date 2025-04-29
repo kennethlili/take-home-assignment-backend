@@ -1,4 +1,4 @@
-package com.spatiallaser.backend.repository;
+package com.spatiallaser.backend.repository.reading;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
 import org.springframework.data.repository.query.Param;
 
-import com.spatiallaser.backend.entity.Property;
+import com.spatiallaser.backend.entity.reading.Property;
 
 /**
  * PostGIS ST Function Reference:

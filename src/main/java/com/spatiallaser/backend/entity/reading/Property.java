@@ -1,4 +1,4 @@
-package com.spatiallaser.backend.entity;
+package com.spatiallaser.backend.entity.reading;
 
 import org.locationtech.jts.geom.Polygon;
 
@@ -15,6 +15,7 @@ import jakarta.validation.constraints.NotNull;
 public class Property {
 
     @Id
+    @NotNull()
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
