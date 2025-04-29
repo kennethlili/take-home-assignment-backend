@@ -6,6 +6,8 @@ import com.spatiallaser.backend.enums.ZoningTypeEnum;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -52,6 +54,7 @@ public class Property {
     private String zoningSub;
 
     @NotNull()
+    @Enumerated(EnumType.STRING)
     @Column(name = "zoning_typ")
     private ZoningTypeEnum zoningType;
 
