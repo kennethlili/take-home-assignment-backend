@@ -23,12 +23,7 @@ public class AuditLog {
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    // Default constructor
     public AuditLog() {
-    }
-
-    public AuditLog(String message) {
-        this.message = message;
     }
 
     public Long getId() {

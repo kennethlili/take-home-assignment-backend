@@ -2,6 +2,8 @@ package com.spatiallaser.backend.entity.reading;
 
 import org.locationtech.jts.geom.Polygon;
 
+import com.spatiallaser.backend.enums.ZoningTypeEnum;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -51,7 +53,7 @@ public class Property {
 
     @NotNull()
     @Column(name = "zoning_typ")
-    private String zoningType;
+    private ZoningTypeEnum zoningType;
 
     public Property() {
     }
@@ -96,7 +98,7 @@ public class Property {
         return zoningSub;
     }
 
-    public String getZoningType() {
+    public ZoningTypeEnum getZoningType() {
         return zoningType;
     }
 

@@ -2,8 +2,12 @@ package com.spatiallaser.backend.entity.writing;
 
 import java.time.LocalDateTime;
 
+import com.spatiallaser.backend.enums.ZoningTypeEnum;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -16,8 +20,9 @@ public class ZoningType {
     @Column(name = "property_ref_id", nullable = false)
     private Long propertyRefId;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "zoning_type", nullable = false)
-    private String zoningType;
+    private ZoningTypeEnum zoningType;
 
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt = LocalDateTime.now();
@@ -26,7 +31,7 @@ public class ZoningType {
     public ZoningType() {
     }
 
-    public ZoningType(Long propertyRefId, String zoningType) {
+    public ZoningType(Long propertyRefId, ZoningTypeEnum zoningType) {
         this.propertyRefId = propertyRefId;
         this.zoningType = zoningType;
     }
@@ -39,11 +44,11 @@ public class ZoningType {
         this.propertyRefId = propertyRefId;
     }
 
-    public String getZoningType() {
+    public ZoningTypeEnum getZoningType() {
         return zoningType;
     }
 
-    public void setZoningType(String zoningType) {
+    public void setZoningType(ZoningTypeEnum zoningType) {
         this.zoningType = zoningType;
     }
 
