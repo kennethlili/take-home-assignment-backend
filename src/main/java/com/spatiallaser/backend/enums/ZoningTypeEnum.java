@@ -4,4 +4,5 @@ public enum ZoningTypeEnum {
     Residential,
     Commercial,
     Industrial,
+    Planned
 }
