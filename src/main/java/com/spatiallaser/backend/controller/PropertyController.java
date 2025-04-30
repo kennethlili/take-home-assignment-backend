@@ -21,8 +21,7 @@ import com.spatiallaser.backend.service.PropertyZoningService;
 import jakarta.validation.Valid;
 
 @RestController
-// TODO: add CORS configuration
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "https://spatial-laser-frontend.onrender.com")
 @RequestMapping("/api")
 public class PropertyController {
 
