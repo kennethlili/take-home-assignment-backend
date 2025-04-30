@@ -6,8 +6,6 @@ This Spring Boot application serves as the backend for the Spatial Laser project
 
 ## Architecture
 
-## Architecture
-
 ### Dual Database Design
 
 The application employs a strategic dual-database architecture:
@@ -33,8 +31,6 @@ Key Features
 
 ## Technical Stack
 
-## Technical Stack
-
 - Framework: Spring Boot 3.4.5
 - Java Version: Java 17
 - Database:
@@ -51,8 +47,6 @@ Key Features
 ### Prerequisites
 
 - JDK 17+
-
-### Environment Configuration
 
 ### Environment Configuration
 
