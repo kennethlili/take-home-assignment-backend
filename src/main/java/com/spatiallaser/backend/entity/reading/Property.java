@@ -4,6 +4,7 @@ import org.locationtech.jts.geom.Polygon;
 
 import com.spatiallaser.backend.enums.ZoningTypeEnum;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -25,6 +26,7 @@ public class Property {
 
     @NotNull()
     @Column(columnDefinition = "geometry(Polygon,4326)")
+    @Schema(implementation = Object.class, ref = "#/components/schemas/GeoJsonPolygon")
     private Polygon geom;
 
     @NotNull()
