@@ -42,7 +42,7 @@ public class WritingDataSourceConfig {
             EntityManagerFactoryBuilder builder,
             @Qualifier("writingDataSource") DataSource dataSource) {
         Map<String, String> props = new HashMap<>(jpaProperties.getProperties());
-        props.put("hibernate.hbm2ddl.auto", "update");
+        props.put("hibernate.hbm2ddl.auto", "none");
 
         return builder
                 .dataSource(dataSource)

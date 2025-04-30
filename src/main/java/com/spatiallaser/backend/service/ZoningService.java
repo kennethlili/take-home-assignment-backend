@@ -19,7 +19,7 @@ public class ZoningService {
         this.zoningTypeRepository = zoningTypeRepository;
     }
 
-    @Transactional
+    @Transactional("writingTransactionManager")
     public List<ZoningType> bulkUpsertZoningType(List<Long> propertyIds, ZoningTypeEnum zoningTypeValue) {
         List<ZoningType> zoningTypesToSave = new ArrayList<>(propertyIds.size());
 
