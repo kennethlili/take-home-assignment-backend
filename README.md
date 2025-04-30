@@ -42,6 +42,37 @@ Key Features
 - Documentation: SpringDoc OpenAPI (Swagger UI)
 - Deployment: Docker with GitHub Actions to Render
 
+## CORS Configuration
+
+This API implements cross-origin resource sharing (CORS) to secure access to endpoints.
+
+### Production Configuration
+
+Controllers are configured with the `@CrossOrigin` annotation specifying the production frontend:
+
+```java
+@CrossOrigin(origins = "https://spatial-laser-frontend.onrender.com")
+```
+
+### Development Environment
+
+For local development, modify the origin in `PropertyController.java`:
+
+```java
+@CrossOrigin(origins = "http://localhost:3000") // Your local frontend URL
+```
+
+### Multiple Environments
+
+To support both production and development simultaneously:
+
+```java
+@CrossOrigin(origins = {
+  "https://spatial-laser-frontend.onrender.com",
+  "http://localhost:3000"
+})
+```
+
 ## Getting Started
 
 ### Prerequisites
