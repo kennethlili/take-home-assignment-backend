@@ -4,15 +4,15 @@ import java.util.List;
 
 import com.spatiallaser.backend.enums.ZoningTypeEnum;
 
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 
 public class ZoningUpdateRequest {
 
     @NotEmpty(message = "Property IDs list cannot be empty")
     private List<Long> propertyIds;
 
-    @NotBlank(message = "Zoning type cannot be empty")
+    @NotNull(message = "Zoning type cannot be null")
     private ZoningTypeEnum zoningType;
 
     // Getters and setters
